@@ -1,0 +1,128 @@
+@import 'ui-variables';
+
+body.platform-win32 {
+
+    // Input
+    input {
+        box-shadow: none !important;
+        border: 1px solid @input-border-color !important;
+        &:focus {
+            border: 1px solid @accent-primary !important;
+        }
+    }
+
+    .composer-header input {
+        border: none !important;
+    }
+
+    .contact-search input {
+        border: none !important;
+        &:focus {
+            border: 1px solid @accent-primary !important;
+        }
+    }
+
+    // Buttons
+    .btn, .btn:hover {
+        box-shadow: none;
+        background: @btn-default-bg-color;
+    }
+
+    .btn.btn-emphasis {
+        &, &:hover {
+            background: @accent-primary;
+        }
+        &:active {
+            background: darken(@btn-emphasis-bg-color, 10%);
+        }
+    }
+
+    .button-dropdown.bordered .only-item {
+        &, &:hover {
+            background: @btn-light-bg-color;
+        }
+    }
+
+    .find-in-thread .btn:hover {
+        background: transparent;
+    }
+
+    .fixed-popover, .contact-edit-footer {
+        .btn:not(.btn-emphasis) {
+            &, &:hover {
+                background: @btn-light-bg-color;
+            }
+        }
+    }
+
+    // Dropdown buttons when open
+    .button-dropdown:not(.btn-emphasis).open {
+        .only-item img.content-mask,
+        .secondary-picker img.content-mask,
+        .primary-item img.content-mask {
+            background-color: @accent-primary;
+        }
+
+        .only-item, .only-item:hover {
+            color: @accent-primary;
+        }
+    }
+
+    // Buttons like Reply/Forward
+    .button-dropdown:hover .primary-item,
+    .button-dropdown.bordered .only-item,
+    .button-dropdown:hover .only-item,
+    .button-dropdown.bordered .primary-item,
+    .button-dropdown .secondary-picker {
+        &, &:hover {
+            box-shadow: none;
+            color: @text-color-inverse;
+            background: @btn-default-bg-color;
+            left: 0px;
+        }
+        &:active {
+            background: darken(@btn-default-bg-color,10%);
+        }
+    }
+
+    // Buttons like Send
+    .button-dropdown.btn-emphasis .only-item,
+    .button-dropdown.btn-emphasis .primary-item,
+    .button-dropdown.btn-emphasis .secondary-picker {
+        &, &:hover {
+            box-shadow: none;
+            color: @btn-emphasis-text-color;
+            background: @btn-emphasis-bg-color;
+            left: 0px;
+        }
+        &:active {
+            background: darken(@btn-emphasis-bg-color, 10%);
+        }
+    }
+
+    // sheet toolbar
+    .layout-mode-popout .sheet-toolbar {
+        border-bottom: none;
+    }
+    .sheet-toolbar {
+        .sheet-toolbar-container .btn-toolbar {
+            height: 33px;
+            padding: 0 12px;
+            margin-left: 0px;
+            &:active, &:hover {
+                background: @btn-default-bg-color;
+            }
+        }
+        .button-group {
+            margin-left: 20px;
+        }
+    }
+
+    // Other
+    a.quoted-text-control,
+    a.quoted-text-control:hover {
+        box-shadow: none;
+        border: 1px solid @input-border-color !important;
+    }
+
+}

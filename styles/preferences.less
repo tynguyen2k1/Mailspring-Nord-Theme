@@ -1,0 +1,232 @@
+@import "ui-variables";
+
+// Preferences
+.preferences-wrap {
+
+    .preferences-content {
+        background-color: @background-primary;
+    }
+
+    .container-preference-tabs {
+        border-bottom: 1px solid @border-dark;
+
+        .preferences-tabs .item {
+            padding-top: 15px;
+        }
+    }
+
+    .platform-note {
+        &, &::before {
+            color: @accent-primary;
+            border-left-color: @accent-primary;
+        }
+    }
+
+    .container-keymaps .shortcut {
+        &:hover, &.editing {
+            .values {
+                outline: 1px solid @accent-primary;
+            }
+        }
+    }
+
+    .container-accounts .accounts-content .account-details {
+        background-color: @gray-base;
+        border-right: 1px solid @border-dark;
+        border-top: 1px solid @border-dark;
+        border-bottom: 1px solid @border-dark;
+        .btn {
+            background-color: @btn-light-bg-color;
+        }
+
+        input[type="color"] {
+            background-color: @gray-base;
+            padding: 0;
+            border: 0;
+        }
+    }
+
+    .container-general .local-data .btn {
+        border: none;
+    }
+
+    #change-scale img.content-dark {
+        filter: invert(100%)
+    }
+
+    .container-identity .identity-content-box {
+        .padded:last-child {
+            border-color: @text-color-very-subtle;
+        }
+
+        .subscription-actions .btn.btn-emphasis {
+            color: @btn-emphasis-text-color;
+            background: @btn-emphasis-bg-color;
+            border: 1px solid @border-color;
+        }
+    }
+
+    .container-mail-rules {
+        .empty-list .btn {
+            background-color: @btn-light-bg-color;
+        }
+        .rule-detail {
+            border: 1px solid @border-dark;
+            border-left: none;
+        }
+    }
+
+    .category-mapper-container {
+        min-width: 650px;
+        .account-section-title {
+            text-align: center;
+        }
+    }
+
+    .preferences-signatures-container {
+        max-width: 846px;
+        .button-dropdown.bordered {
+            .only-item {
+                background: @btn-light-bg-color;
+            }
+            .secondary-items .menu .item {
+                background-color: @btn-light-bg-color;
+                background-position: left;
+                background-position-x: 6%;
+                background-size: 10px;
+                margin: 0;
+                padding: 5px 10px 5px 25px;
+                background-repeat: no-repeat;
+                &.checked{
+                    background-image: url("mailspring://Tokyo-night/styles/images/menu/checked@2x.png");
+                }
+                &.checked:hover {
+                    background-image: url("mailspring://Tokyo-night/styles/images/menu/checked-orange@2x.png");
+                }
+            }
+        }
+
+        .signature-list
+        {
+            .items-wrapper {
+                height: 282px;
+                border-right: none;
+            }
+            .buttons-wrapper {
+                border-right: none;
+            }
+        }
+        .signature-wrap {
+            margin-left: 0;
+            .section {
+                border: none;
+            }
+            .section-header {
+                margin-top: 12px;
+                padding-top: 12px;
+                padding-left: 12px;
+                background-color: @background-secondary;
+                border: 1px solid @border-dark;
+                border-bottom: none;
+            }
+            .section.basic-info {
+                background-color: @background-secondary;
+                border: 1px solid @border-dark;
+                border-bottom: none;
+                margin-bottom: 0px;
+                padding: 10px;
+            }
+            .section.preview {
+                min-height: 206px;
+                background-color: @background-secondary;
+                border-left: 1px solid @border-dark;
+                border-right: 1px solid @border-dark;
+                padding-left: 12px;
+                padding-right: 12px;
+                .preview {
+                    background-color: @background-primary;
+                    padding: 10px;
+                }
+                .label{
+                    color: @text-color-very-subtle;
+                }
+            }
+            .signature-template-picker {
+                background-color: @background-secondary;
+                border: 1px solid @border-dark;
+                border-top: none;
+                padding-left: 8px;
+                padding-right: 8px;
+                height: 68px;
+            }
+            .section.information {
+                background-color: @background-secondary;
+                border: 1px solid @border-dark;
+                border-top: none;
+                .field.photo-picker .photo-well
+                {
+                    border-color: @text-color-very-subtle;
+                }
+            }
+            textarea.section {
+                background-color: @background-secondary;
+                border: 1px solid @border-dark;
+                border-top: none;
+                box-shadow: none;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                resize: none;
+                overflow-y: scroll;
+                height: 300px;
+            }
+        }
+    }
+
+    .preferences-templates-container {
+        .template-list {
+            .items-wrapper {
+                height: 300px;
+                border-right: none;
+            }
+            .buttons-wrapper {
+                border-right: none;
+            }
+        }
+
+        .template-wrap {
+            margin-left: 0px;
+            .section {
+                border: 1px solid @border-dark;
+                border-bottom: none;
+                margin-bottom: 0px;
+                padding-top: 12px;
+                padding-left: 12px;
+                background-color: @background-secondary;
+            }
+            .section.editor {
+                border: 1px solid @border-dark;
+                border-top: none;
+                margin-top: 0px;
+                min-height: 300px;
+                .RichEditor-root {
+                    background-color: @background-secondary;
+                    .RichEditor-toolbar .floating-container .inner {
+                        background-color: @background-secondary;
+                        border-bottom: 1px solid @border-header-divider;
+                        // invert color palet
+                        .color-picker {
+                            filter: invert(100%) hue-rotate(180deg);
+                        }
+                    }
+                }
+            }
+
+            .section.note {
+                border: none;
+                padding-top: 0px;
+                margin-top: 10px;
+                background-color: @background-primary;
+            }
+        }
+    }
+}

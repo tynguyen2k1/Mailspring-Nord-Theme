@@ -1,0 +1,109 @@
+@import "ui-variables";
+
+// Composer
+.composer-inner-wrap {
+    .composer-header {
+        .composer-header-actions .action {
+            &:hover {
+                color: @accent-primary;
+                img.content-mask {
+                    background-color: @accent-primary;
+                }
+            }
+        }
+
+        ::after {
+            border-bottom: 1px solid @border-header-divider;
+        }
+
+        // sender selector
+        .button-dropdown .only-item
+        {
+            background: @btn-default-bg-color;
+            box-shadow: none;
+        }
+    
+        // recipient tokens
+        .tokenizing-field .token {
+            background: @btn-default-bg-color;
+            box-shadow: none;
+
+            &.selected, 
+            &.dragging {
+                background: @accent-primary;
+                border-color: @border-color;
+            }
+
+            &.invalid.selected, 
+            &.invalid.dragging {
+                background: @background-color-error;
+                border-color: @border-color;
+            }
+        }
+    }
+    .RichEditor-toolbar {
+        .floating-container {
+            border-bottom: 1px solid @border-header-divider;
+        }
+        // invert color palet
+        .color-picker {
+            filter: invert(100%) hue-rotate(180deg);
+        }
+    }
+}
+
+.RichEditor-root .template-variable {
+    color: @accent-primary-prefilter;
+    border: 1px solid @accent-primary-prefilter;
+    background-color: transparent;
+    &.selected {
+        color: @text-color-prefilter;
+        background-color: @accent-primary-prefilter;
+        border-color: @accent-primary-prefilter;
+    }
+} 
+
+.composer-footer-region .template-status-bar {
+    background-color: @accent-primary;// transparent;
+    color: @text-color;
+    border-color: @accent-primary;
+}
+
+// for color of templates and hyperlinks
+// apply style rules similar to email-frame.less
+.RichEditor-root .RichEditor-content {
+    // Invert the color of everything in the message.
+    color: @text-color-prefilter;
+    blockquote {
+        border-color: @text-color-prefilter;
+    }
+    filter: @message-filter;
+
+    blockquote div.uneditable.custom-block > div {
+        // Undo the color inversion for html tables, while 
+        // adding/restoring color elements for emails that 
+        // implicitly assume a white background.
+        > table,
+        > :not(table) > table,
+        > :not(table) > :not(table) > table,
+        > :not(table) > :not(table) > :not(table) > table {
+            padding: 10px;
+            color: black;
+            background: white !important;
+            a, a:hover, a:active {
+                color: unset;
+            } 
+            filter: @message-filter-undo;
+        }
+
+        // Undo the color inversion for all images that are not
+        // part of html tables.
+        > img, 
+        > :not(table) > img,
+        > :not(table) > :not(table) > img,
+        > :not(table) > :not(table) > :not(table) > img,
+        > :not(table) > :not(table) > :not(table) > :not(table) img { 
+            filter: @message-filter-undo;
+        }
+    }
+}

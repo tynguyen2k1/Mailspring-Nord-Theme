@@ -1,0 +1,78 @@
+@import "ui-variables";
+
+.btn {
+    background: @btn-default-bg-color;
+}
+
+// Emphasis button general
+.btn.btn-emphasis {
+    color: @text-color-inverse;
+    background: @accent-primary;
+    border: none;
+
+    &:active {
+        background: darken(@btn-emphasis-bg-color, 10%);
+    }
+}
+
+// Dropdown buttons when open
+.button-dropdown:not(.btn-emphasis).open {
+    .only-item img.content-mask,
+    .secondary-picker img.content-mask,
+    .primary-item img.content-mask {
+        background-color: @accent-primary;
+    }
+
+    .only-item, .only-item:hover {
+        color: @accent-primary;
+    }
+}
+
+// Buttons like Reply/Forward
+.button-dropdown:hover .primary-item,
+.button-dropdown.bordered .only-item,
+.button-dropdown:hover .only-item,
+.button-dropdown.bordered .primary-item,
+.button-dropdown .secondary-picker {
+    color: @text-color-inverse;
+    background: @btn-default-bg-color;
+    border: none;
+}
+
+// Buttons like Send 
+.button-dropdown.btn-emphasis .only-item, 
+.button-dropdown.btn-emphasis .primary-item,
+.button-dropdown.btn-emphasis .secondary-picker {
+    color: @btn-emphasis-text-color;
+    background: @btn-emphasis-bg-color;
+    border: none;
+
+    &:active {
+        background: darken(@btn-emphasis-bg-color, 10%);
+    }
+}
+
+// Hover in dropdown
+.button-dropdown .secondary-items .menu .item:hover {
+    color: @accent-primary;
+    background-color: @background-secondary;
+    img.content-mask {
+        background-color: @accent-primary;
+    }
+}
+
+// Icon buttons; to be verified if below is used in Mailspring
+.btn-icon {
+    &:hover {
+        color: @accent-primary;
+        img.content-mask {
+            background-color: @accent-primary;
+        }
+    }
+    &:active {
+        color: @accent-primary;
+        img.content-mask {
+            background-color: @accent-primary;
+        }
+    }
+}

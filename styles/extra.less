@@ -1,0 +1,87 @@
+@import "ui-variables";
+
+//MailLabel is a React.Component that sets much of the color in a LabelColorizer class. !important
+//seems to be the only way to override programmatic style changes coming from the javascript.
+.mail-label {
+
+	border: none !important;
+	color: @text-color-inverse !important;
+	background-color: @accent-primary !important;
+	background-image: none !important;
+	box-shadow: none !important;
+
+	.x {
+		background-color: @text-color-inverse !important;
+	}
+}
+.snooze-mail-label  img {
+    background-color: @text-color-inverse !important;;
+}
+
+// Icons
+.mail-important-icon {
+	background-image: url("mailspring://Tokyo-night/styles/images/important/Icon-Important-Hover@2x.png");
+}
+
+.mail-important-icon.enabled.active {
+	background-image: url("mailspring://Tokyo-night/styles/images/important/Icon-Important-Active@2x.png");
+}
+
+.mail-important-icon.enabled:hover {
+	background-image: url("mailspring://Tokyo-night/styles/images/important/Icon-Important-HoverActive@2x.png");
+}
+
+.mail-important-icon.enabled.active:hover {
+	background-image: url("mailspring://Tokyo-night/styles/images/important/Icon-Important-Active@2x.png");
+}
+
+.draft-icon {
+  content: url("mailspring://Tokyo-night/styles/images/thread-list/icon-draft-pencil@2x.png");
+}
+
+.thread-sharing-button.active > img.content-mask {
+    background-color: @accent-primary;
+}
+
+.activity-dashboard .metric-stat.read-receipts img {
+    background-color: @open-activity-color;
+}
+
+.activity-dashboard .metric-stat.link-tracking img {
+    background-color: @link-activity-color;
+}
+
+.activity-dashboard .metric-stat.replies img {
+    background-color: @reply-activity-color;
+}
+
+.open-tracking-icon {
+    img.content-mask.opened {
+        background-color: @open-tracking-color;
+        cursor: pointer;
+    }
+    img.content-mask.unopened {
+        background-color: @unopen-tracking-color;
+        cursor: default;
+    }
+    .open-count {
+        background-color: @accent-primary;
+    }
+}
+
+.list-item.focused,
+.list-item.selected {
+    .open-tracking-icon img.content-mask.unopened {
+        background-color: @unopen-tracking-color;
+    }
+    .open-tracking-icon img.content-mask.opened {
+        background-color: @text-color-inverse;
+    }
+}
+
+// img.content-dark {
+//  filter: invert(100%);
+// }
+// img.content-light {
+//  filter: invert(100%);
+// }

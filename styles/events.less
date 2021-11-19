@@ -1,0 +1,30 @@
+@import "ui-variables";
+
+// Calendar events
+.event-wrapper {
+    border: 1px solid @border-dark;
+    background-color: @background-secondary;
+
+    .event-header {
+        border-bottom: 1px solid @border-dark;
+
+        > img {
+            content:url("mailspring://Tokyo-night/styles/images/calendar/icon-RSVP-calendar-mini@2x.png");
+        }
+    }
+
+    .event-body {
+
+        .event-date .event-day {
+            color: @accent-primary;
+        }
+
+        .event-actions .btn-rsvp {
+            background: @btn-light-bg-color;
+
+            &.ACCEPTED {
+                background: @accent-primary;
+            }
+        }
+    }
+}

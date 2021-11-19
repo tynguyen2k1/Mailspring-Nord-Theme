@@ -1,0 +1,55 @@
+@import 'ui-variables';
+
+// Activity list
+.toolbar-activity {
+    .activity-toolbar-icon {
+        background-color: @text-color-heading;
+
+        &:hover {
+            background-color: @text-color-heading;
+            cursor: pointer;
+        }
+
+        &.unread {
+            background-color: @accent-primary;
+
+            &:hover {
+                background-color: @accent-primary;
+            }
+        }
+    }
+
+    .unread-count.active {
+        background: @accent-primary;
+        font-weight: 600;
+        padding-top: 1px;
+    }
+}
+
+// Sync activity
+.sidebar-activity {
+    .item .sync-activity .account .folder-progress::before {
+        background-color: @accent-primary;
+        border-color: @accent-primary;
+    }
+
+    @keyframes border-pulse {
+        0% {
+            border-color: transparent;
+        }
+        100% {
+            border-color: @accent-primary;
+        }
+    }
+}
+
+// Unread counters
+.outline-view .item .item-count-box.alt-count {
+    background: @accent-primary;
+    color: @background-secondary;
+}
+
+.outline-view .item .item-count-box {
+    color: @accent-primary;
+    box-shadow: inset 0 0 0 1px fade(@accent-primary, 50%);
+}

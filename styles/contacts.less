@@ -1,0 +1,101 @@
+@import 'ui-variables';
+
+// Contacts
+.sheet-toolbar {
+    .btn-toolbar {
+        color: @text-color-heading;
+        img.content-mask {
+            background: currentColor; 
+        }
+        svg {
+            fill: currentColor;
+        }
+    }
+    .toolbar-ContactsSidebar .item-spacer {
+        flex: 0 0 0 !important;
+    }
+    .contact-search {
+        input {
+            border: none;
+            box-shadow: none;
+            &:focus {
+                border: 1px solid @accent-primary;
+                box-shadow: 0 0 1.5px darken(@accent-primary, 20%);
+            }
+        }
+        img.clear {
+            filter: invert(100%);
+        }
+    }
+}
+
+.column-ContactsDetail {
+    background-color: @background-secondary;
+}
+
+.contact-detail-column {
+    .contact-profile-photo {
+        box-shadow: 0 0 5px @text-color-very-subtle;
+    }
+    .contact-group-memberships .group-membership {
+        background: @accent-primary;
+        color: @text-color-inverse;
+        border: none;
+        border-radius: 3px;
+        padding: 4px 12px;
+        margin-top: 20px;
+        img.content-dark {
+            filter: invert(100%);
+        }
+    }
+    .contact-attributes {
+        .contact-attributes-section {
+            border-bottom: 1px solid @text-color-very-subtle;
+            &:first-child {
+                padding-top: 10px;
+                border-top: 1px solid @text-color-very-subtle;
+            }
+        }
+        .contact-attribute {
+            label {
+                color: @text-color-subtle;
+                svg {
+                    fill: currentColor;
+                }
+            }
+            div {
+              color: @text-color;
+            }
+            a {
+                color: @text-color;
+                text-decoration: none;
+                &:hover {
+                    color: @accent-primary;
+                    text-decoration: underline;
+                }
+            }
+            .type {
+                color: @text-color-very-subtle;
+            }
+        }
+    }
+    .contact-detail-content-wrap {
+        .btn.remove, .btn.add {
+            border: 1px solid @input-border-color;
+            background-color: @input-bg;        
+        }
+    }
+}
+
+.contact-edit-footer {
+    display: flex;
+    justify-content: flex-end;
+    border-top: 5px solid @background-primary;
+    width: auto;
+    > div {
+        flex: 0 0 6px !important;
+    }
+    .btn:not(.btn-emphasis) {
+        background: @btn-light-bg-color;
+    }
+}

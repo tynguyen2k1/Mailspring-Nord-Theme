@@ -1,0 +1,54 @@
+@import "ui-variables";
+
+// Thread list
+.thread-list, .draft-list {
+	.list-item {
+		background-color: @background-primary;
+	}
+
+	.unread:not(.focused):not(.selected) {
+		background-color: #343b5875;
+	}
+
+	.unread:not(.focused):not(.selected) {
+		&:hover {
+			background: @background-secondary;
+		}
+	}
+
+	.thread-icon {
+		&.thread-icon-attachment {
+		      background-image:url("mailspring://Tokyo-night/styles/images/thread-list/icon-attachment-@2x.png");
+		    }
+
+		&.thread-icon-unread {
+			background-image: url("mailspring://Tokyo-night/styles/images/thread-list/icon-unread-@2x.png");
+		}
+
+		&.thread-icon-replied {
+      		background-image: url("mailspring://Tokyo-night/styles/images/thread-list/icon-replied-@2x.png");
+    	}
+
+    	&.thread-icon-forwarded {
+      		background-image:url("mailspring://Tokyo-night/styles/images/thread-list/icon-forwarded-@2x.png");
+    	}
+
+		&.thread-icon-star {
+			background-image: url("mailspring://Tokyo-night/styles/images/thread-list/icon-star-@2x.png");
+		}
+	}
+}
+
+.thread-list .thread-icon-star:hover
+{
+	background-image: url("mailspring://Tokyo-night/styles/images/thread-list/icon-star-@2x.png");
+}
+
+// To be verified if visible effect
+.list-tabular {
+	.list-tabular-item {
+		&.keyboard-cursor {
+			border-left-color: @accent-primary;
+		}
+	}
+}

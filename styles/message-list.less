@@ -1,0 +1,42 @@
+@import 'ui-variables';
+
+// Message List
+#message-list {
+    .footer-reply-area-wrap {
+        box-shadow: none;
+        margin-bottom: 6px;
+    }
+
+    .message-item-wrap:not(.before-reply-area) {
+        padding-bottom: 6px;
+    }
+
+    .message-item-wrap .message-item-white-wrap {
+        box-shadow: none;
+        // Removed blurred-primary-color over draft at end of message list
+        &.composer-outer-wrap {
+            &,
+            .composer-participant-field .dropdown-component .signature-button-dropdown .only-item,
+            .composer-action-bar-wrap,
+            .RichEditor-toolbar .inner {
+                background: @background-primary;
+            }
+        }
+    }
+}
+
+// Related thread information
+.column-MessageListSidebar {
+    border: none;
+    .sidebar-participant-picker {
+        padding-left: 0px;
+        padding-right: 6px;
+    }
+
+    .sidebar-section {
+        border: none;
+        margin-left: 0px;
+        margin-right: 6px;
+    }
+
+}

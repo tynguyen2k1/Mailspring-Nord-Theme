@@ -1,0 +1,44 @@
+@import "ui-variables";
+
+// Reminders
+.thread-list .list-item {
+
+    &.thread-list-reminder-item {
+        background-color: @reminders-background-color;
+        &.unread {
+            background-color: @reminders-background-color;
+            &:not(.focused):not(.selected) {
+                background-color: @reminders-background-color;
+            }
+        }
+        &:hover, &.focused, &.selected {
+            background: @list-focused-bg;
+        }
+        .thread-icon-reminder-triggered {
+            background-image: url("mailspring://Predawn/styles/images/thread-list/icon-reminder@2x.png");
+        }
+    }
+
+    .thread-icon-reminder-pending {
+        background-image: url("mailspring://Predawn/styles/images/thread-list/icon-reminder-outline@2x.png");
+    }
+}
+
+.message-list-headers .send-reminders-header {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.send-reminders-header {
+    color: @reminders-color;
+    background: @background-primary;
+
+    // background: linear-gradient(to bottom, @reminders-border-color 0%, @background-primary 10%);
+    border-bottom: 1px solid @reminders-border-color;
+    img {
+        background-color: @reminders-color;
+    }
+    ~ .header-toggle-control {
+        top: 57px !important;
+    }
+}
