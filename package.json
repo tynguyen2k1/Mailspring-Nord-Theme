@@ -1,10 +1,10 @@
 {
-  "name": "Tokyo-night",
-  "title": "Tokyo night",
-  "displayName": "Tokyo night",
+  "name": "Nord",
+  "title": "Nord",
+  "displayName": "Nord Theme",
   "theme": "ui",
   "version": "0.1.0",
-  "description": "Tokyo-night theme",
+  "description": "Nord Theme",
   "license": "MIT",
   "engines": {
     "mailspring": "*"

@@ -3,16 +3,16 @@
 // Thread list
 .thread-list, .draft-list {
 	.list-item {
-		background-color: @background-primary;
-	}
-
-	.unread:not(.focused):not(.selected) {
 		background-color: #343b5875;
 	}
 
 	.unread:not(.focused):not(.selected) {
+		background-color: @background-primary;
+	}
+
+	.unread:not(.focused):not(.selected) {
 		&:hover {
-			background: @background-secondary;
+			background: rgba(46, 52, 64, 0.5);
 		}
 	}
 
